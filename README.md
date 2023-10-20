@@ -45,7 +45,7 @@
 - If there is no overflow, keep adding the waterflow(k) into each tank and increment time:
     -
     waterLevels[i] = waterLevels[i] + waterFlowRate
-    recursive call -> fillTanks(waterLevels, capacities, waterFlowRate, lastTank, time + 1);
+    recursive call -> fillTanks(waterLevels, capacities, waterFlowRate, lastTank, time + 1)
 
 - Once the last tank hits its capacity, waterLevels[lastTank] == capacities[lastTank], return the time
 - I have converting the input flow rate into multiples of 0.5 seconds - inorder to find the exact second in which the tank gets filled
@@ -67,11 +67,11 @@
 - Time to fill the next tanks (other than the last one). Using recursive call, send the next tank index and add the input water units to its waterlevel:
     -
     input+ waterlevel[1st tank] = capacity[1st tank]
-    recursive call => calculateTimeToAllFull(capacities, waterFlowRate, lastTank, currentIndex + 1, waterLevel + waterFlowRate);
+    recursive call => calculateTimeToAllFull(capacities, waterFlowRate, lastTank, currentIndex + 1, waterLevel + waterFlowRate)
 
 - The tank with the highest capacity needs to get full, so use Max function to compare.
     -
-    Math.max(timeToFillCurrent, timeToFillNext);
+    Math.max(timeToFillCurrent, timeToFillNext)
 
 
 
